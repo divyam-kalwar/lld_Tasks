@@ -1,8 +1,10 @@
 package BankAccount;
 
 public class BankAccount {
-    double balance;
-    String ownerName;
+    private double balance;
+    private String ownerName;
+
+    BankAccount(){}
 
     BankAccount(double balance, String ownerName){
         this.balance = balance;
@@ -23,6 +25,14 @@ public class BankAccount {
         } else {
             balance-=amount;
         }
+    }
+
+    public void setBalance(double balance){
+        this.balance = balance;
+    }
+
+    public void setOwnerName(String ownerName){
+        this.ownerName = ownerName;
     }
 
     public double getBalance(){
