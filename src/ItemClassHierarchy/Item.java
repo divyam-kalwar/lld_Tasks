@@ -1,6 +1,6 @@
 package ItemClassHierarchy;
 
-public class Item {
+public class Item implements Comparable<Item> {
     String id;
     String name;
     double price;
@@ -36,5 +36,10 @@ public class Item {
     }
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    @Override
+    public int compareTo(Item other) {
+        return this.name.compareTo(other.name);
     }
 }
