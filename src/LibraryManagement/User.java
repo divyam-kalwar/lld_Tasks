@@ -15,7 +15,7 @@ public abstract class User {
 
     //
     public User(String name, String contactInfo) {
-
+        this.userId = generateUniqueId();
         this.name = name;
         this.contactInfo = contactInfo;
     }
@@ -26,7 +26,7 @@ public abstract class User {
         this.contactInfo = other.contactInfo;
     }
 
-    private final static int generateUniqueId(){
+    private final static String generateUniqueId(){
         return String.valueOf(++id);
     }
 
@@ -51,5 +51,7 @@ public abstract class User {
     public abstract void displayDashboard();
 
     public abstract boolean canBorrowBooks();
+
+    public abstract void displayUserDetails();
 }
 
